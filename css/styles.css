@@ -403,10 +403,17 @@ hr {
 .section > button {
   width: 100%;
 }
+
 .button-container {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
 }
+
+.button-container::-webkit-scrollbar {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .banner h3 {
     font-size: 28px;
