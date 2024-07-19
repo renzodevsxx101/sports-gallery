@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Gallery</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top opaque-navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand page-scroll" href="#">SportsTube</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNav">
+          <ul class="nav navbar-nav pull-right">
+            <li><a href="#about" class="page-scroll">About</a></li>
+            <li><a href="#videos" class="page-scroll">Videos</a></li>
+            <li><a href="#contact" class="page-scroll">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <section class="banner">
+      <div class="container text-center">
+        <h3>Welcome to SportsTube!</h3>
+        <p>
+          Your ultimate destination for sports videos. Explore, watch, and get
+          inspired by the best sports content curated just for you. <br />
+        </p>
+        <a href="#gallery" class="cta">
+          <span class="span">Explore Now!</span>
+          <span class="second">
+            <svg
+              width="50px"
+              height="20px"
+              viewBox="0 0 66 43"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g
+                id="arrow"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <path
+                  class="one"
+                  d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z"
+                  fill="#FFFFFF"
+                ></path>
+                <path
+                  class="two"
+                  d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z"
+                  fill="#FFFFFF"
+                ></path>
+                <path
+                  class="three"
+                  d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z"
+                  fill="#FFFFFF"
+                ></path>
+              </g>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <div class="abt" id="about">
+      <div class="jumbotron">
+        <div class="container">
+          <h3>Discover Your Favorite Sports Moments</h3>
+          <hr />
+          <p>
+            From stunning volleyball spikes to jaw-dropping basketball dunks,
+            we've got all the sports action you crave. Experience the excitement
+            of soccer goals, badminton smashed and boxing knockouts. Your
+            ultimate sports video library is here.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <button id="volley" class="button" onclick="showVideos('volleyball')">
+        Volleyball
+      </button>
+      <button id="bask" class="button" onclick="showVideos('basketball')">
+        Basketball
+      </button>
+      <button id="badm" class="button" onclick="showVideos('badminton')">
+        Badminton
+      </button>
+      <button id="footb" class="button" onclick="showVideos('football')">
+        Football
+      </button>
+      <button id="box" class="button" onclick="showVideos('boxing')">
+        Boxing
+      </button>
+    </div>
+    <div id="videos">
+      <div id="gallery">
+        <div id="volleyball" class="video-list active">
+          <div class="container-fluid pb-video-container">
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/PmjjDlEu41I?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('PmjjDlEu41I')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/-oUAuC9WAvc?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('-oUAuC9WAvc')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/xa3Y180OnV4?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('xa3Y180OnV4')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/PF_I3-tFP2Q?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('PF_I3-tFP2Q')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/iGQatpZEhfk?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('iGQatpZEhfk')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/Mlsz8cyEe58?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('Mlsz8cyEe58')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/rc_1Jftz01c?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('rc_1Jftz01c')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/MEeygvGR4gU?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('MEeygvGR4gU')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/PF_I3-tFP2Q?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('PF_I3-tFP2Q')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/aUe4I5iRQzc?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('aUe4I5iRQzc')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/vEyT6sSm1Z8?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('vEyT6sSm1Z8')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/_bkUApMEyh4?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('_bkUApMEyh4')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="basketball" class="video-list">
+          <div class="container-fluid pb-video-container">
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/_jTbgjzzl38?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('_jTbgjzzl38')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/Mj5KU7SwMh0?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('Mj5KU7SwMh0')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/49wLHPlMwEk?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('49wLHPlMwEk')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/2zbsJAJAIfc?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('2zbsJAJAIfc')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/Nz3f9-Kwt6Y?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('Nz3f9-Kwt6Y')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/gQTv6jY8Kuo?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('gQTv6jY8Kuo')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="badminton" class="video-list">
+          <div class="container-fluid pb-video-container">
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/gTm2dbteyt4?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('gTm2dbteyt4')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/LvL97AUnk4s?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('LvL97AUnk4s')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/RRM9uUJtP2Q?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('xa3Y180OnV4')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/s9KhSmhSo7s?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('s9KhSmhSo7s')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/PkXMu9ZFPoo?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('PkXMu9ZFPoo')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/vX2j8-uh9Bs?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('vX2j8-uh9Bs')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/PkXMu9ZFPoo?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('PkXMu9ZFPoo')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/vX2j8-uh9Bs?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('vX2j8-uh9Bs')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/PkXMu9ZFPoo?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('PkXMu9ZFPoo')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/vX2j8-uh9Bs?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('vX2j8-uh9Bs')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/PkXMu9ZFPoo?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('PkXMu9ZFPoo')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/vX2j8-uh9Bs?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('vX2j8-uh9Bs')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="football" class="video-list">
+          <div class="container-fluid pb-video-container">
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/L9ng-jUuvho?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('L9ng-jUuvho')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/jdxQwh_J7Pg?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('jdxQwh_J7Pg')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/zqxV0ken2jg?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('zqxV0ken2jg')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/LITy6G7fQuA?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('LITy6G7fQuA')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/86ywbknj2Ig?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('86ywbknj2Ig')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/FhLHeypZU3Y?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('FhLHeypZU3Y')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/L9ng-jUuvho?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('L9ng-jUuvho')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/rnHuzc35Kjw?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('rnHuzc35Kjw')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/zqxV0ken2jg?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('zqxV0ken2jg')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="boxing" class="video-list">
+          <div class="container-fluid pb-video-container">
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/G4asdZu-5m8?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('G4asdZu-5m8')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/LpLM1suvSuE?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('LpLM1suvSuE')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/A-Ug__-5KK8?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('A-Ug__-5KK8')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/R5MfexeJZLk?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('R5MfexeJZLk')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/kUruG4y9mak?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('kUruG4y9mak')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/-bbE09zA7XI?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('-bbE09zA7XI')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/G4asdZu-5m8?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('G4asdZu-5m8')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/LpLM1suvSuE?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('LpLM1suvSuE')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+            <div class="pb-video">
+              <div class="pb-video-frame">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/kUruG4y9mak?ecver=1"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="pb-video-overlay" onclick="showVideo('kUruG4y9mak')">
+                <i class="fa fa-play"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pb-video-popup" id="pb-video-modal">
+          <span class="close" onclick="hideVideo()">&times;</span>
+          <iframe
+            id="pb-video-iframe"
+            width="560"
+            height="315"
+            src=""
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact" id="contact">
+      <div class="bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+              <h1>Let's Get In Touch!</h1>
+              <hr class="primary" />
+              <p class="my-font">
+                Excited to begin your next sports project? Awesome! Reach out to
+                us via phone or email, and we'll respond promptly to discuss
+                your ideas and goals!
+              </p>
+            </div>
+            <div class="padded">
+              <div class="col-lg-4 col-lg-offset-2 text-center">
+                <i class="fa fa-phone fa-3x sr-contact"></i>
+                <p>+63930-195-9824</p>
+              </div>
+
+              <div class="col-lg-4 text-center">
+                <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                <p>
+                  <a href="mailto:your-email@your-domain.com"
+                    >pagdanganan.johnrenz@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function showVideos(sport) {
+        const videoLists = document.querySelectorAll(".video-list");
+        videoLists.forEach((list) => {
+          list.classList.remove("active");
+        });
+
+        const buttons = document.querySelectorAll(".button");
+        buttons.forEach((btn) => {
+          btn.classList.remove("selected");
+          btn.classList.remove("opac");
+        });
+
+        switch (sport) {
+          case "volleyball":
+            setActive("volleyball", "volley");
+            break;
+          case "basketball":
+            setActive("basketball", "bask");
+            break;
+          case "badminton":
+            setActive("badminton", "badm");
+            break;
+          case "football":
+            setActive("football", "footb");
+            break;
+          case "boxing":
+            setActive("boxing", "box");
+            break;
+        }
+
+        function setActive(sportId, buttonId) {
+          document.getElementById(sportId).classList.add("active");
+          document.getElementById(buttonId).classList.add("opac");
+        }
+
+        const activeButton = document.querySelector(
+          `.button[onclick="showVideos('${sport}')"]`
+        );
+        activeButton.classList.add("selected");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        showVideos("volleyball");
+      });
+
+      function showVideo(videoId) {
+        var iframeSrc =
+          "https://www.youtube.com/embed/" + videoId + "?autoplay=1";
+        var iframe = document.getElementById("pb-video-iframe");
+
+        if (!iframe.getAttribute("src")) {
+          iframe.setAttribute("src", iframeSrc);
+        }
+
+        document.getElementById("pb-video-modal").style.display = "flex";
+      }
+
+      function hideVideo() {
+        var iframe = document.getElementById("pb-video-iframe");
+        iframe.setAttribute("src", "");
+        document.getElementById("pb-video-modal").style.display = "none";
+      }
+
+      $(function () {
+        $(document).on("click", "a.page-scroll", function (event) {
+          var $anchor = $(this);
+          $("html,body")
+            .stop()
+            .animate(
+              {
+                scrollTop: $($anchor.attr("href")).offset().top - 45,
+              },
+              1500,
+              "easeInOutExpo"
+            );
+          event.preventDefault();
+        });
+      });
+    </script>
+  </body>
+</html>
