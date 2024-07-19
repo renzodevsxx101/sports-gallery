@@ -173,6 +173,8 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 0 5%;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
 body,
@@ -400,8 +402,10 @@ hr {
   color: #3a7bd5;
 }
 
-.section > button {
-  width: 100%;
+@media (min-width: 769px) {
+  .section > button {
+    width: 100%;
+  }
 }
 
 .button-container {
@@ -440,6 +444,7 @@ hr {
 
   .button {
     font-size: 1.2em;
+    flex: 0 0 auto;
   }
 
   .navbar-toggle {
