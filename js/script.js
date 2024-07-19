@@ -75,3 +75,14 @@ $(function () {
     event.preventDefault();
   });
 });
+
+function toggleNav(button) {
+  var nav = document.getElementById("myNav");
+  if (nav.classList.contains("open")) {
+    nav.classList.remove("open");
+    button.classList.remove("open");
+  } else {
+    nav.classList.add("open");
+    button.classList.add("open");
+  }
+}
